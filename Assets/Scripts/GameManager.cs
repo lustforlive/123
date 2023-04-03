@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-public int count;
+public  GameObject food,protoz;
+public Vector2 vector;
+public int n,m;
+
 private void Start() {
-    count = 0;
+  
 }
 public void ButClik(){
-count++; 
-Debug.Log(count);   
+  m=Random.Range(15,20); 
+  for(int i=0;i<m;i++){
+    vector.Set(Random.Range(-9f,9f),Random.Range(-4.5f,4.5f));
+    Instantiate(protoz,vector,Quaternion.identity);
+    }
 }
    
 }

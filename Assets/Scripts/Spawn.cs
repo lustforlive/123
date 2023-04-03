@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-public GameObject food,protoz;
+public  GameObject food,protoz;
 public Vector2 vector;
 public int n,m;
 private void Awake() { n=Random.Range(20,25); 
@@ -18,11 +18,8 @@ m=Random.Range(15,20);
     Instantiate(protoz,vector,Quaternion.identity);
     }
 }
-    // Start is called before the first frame update
-    void Start()
-    {
-      
-    }
+    
+  
 private float timeLeft=6;
     // Update is called once per frame
     void Update()

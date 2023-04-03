@@ -19,43 +19,50 @@ private Vector2 targetPos;
         vector.normalized */
 public float speed;
 public Vector2 vector;
-   public float c,a;
+   public float c,a,b;
+   
  void Start()
     {
         speed = Random.Range(2f, 7f);
     }
   public void FixedUpdate() {
  
-  c = Random.Range(0f, 1f);
-  a = Random.Range(0f, 1f);
-  vector.x= Mathf.Acos(c);
-  vector.y= Mathf.Asin(a);
+ b=Random.Range(0, 10);
+ a= Random.Range(0f,1f);
+ c=Random.Range(0f,1f);
+  //vector.x= Mathf.Acos(c);
+  //vector.y= Mathf.Asin(a);
+
+  vector.x= Mathf.Acos(c)-Mathf.Asin(c);
+  vector.y= Mathf.Asin(a)+Mathf.Acos(a);
   
     transform.Translate( vector.normalized*speed);
+      
   
+
+    
+   
+
     if (transform.position.y> 4.5f)
         {
             speed = -speed;
-            
- 
+             
         }
         if (transform.position.y< -4.5f)
         {
-            speed  = Random.Range(0.01f, 0.1f);
+            speed  = Random.Range(0f, 0.1f);
            
  
          }   
     if (transform.position.x> 9.5f)
         {
             speed = -speed;
-           
- 
+          
         }
         if (transform.position.x < -9.5f)
-        {
-           speed  = Random.Range(0.01f, 0.1f);
-          
-
+        {speed  = Random.Range(0f, 0.1f);
+           //speed  = Random.Range(0.01f, 0.1f);
+             
        }
 
 
