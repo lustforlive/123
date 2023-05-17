@@ -6,6 +6,7 @@ TagManager:
   tags:
   - food
   - ameba
+  - infuz
   layers:
   - Default
   - TransparentFX
